@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  backend:
+    image: trahulprabhu38/stackops:v1
+    container_name: stackops_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+    networks:
+      - stacknet
+
+  frontend:
+    image: trahulprabhu38/stackops-frontend:v1
+    container_name: stackops_frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_BACKEND_URL=http://stackops_backend:8000
+    depends_on:
+      - backend
+    networks:
+      - stacknet
+
+networks:
+  stacknet:
+    driver: bridge
