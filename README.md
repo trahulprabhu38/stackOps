@@ -17,6 +17,7 @@ This project consists of a FastAPI backend and a Next.js frontend that communica
     └── package.json       # Node.js dependencies
 ```
 
+
 ## Prerequisites
 
 - Python 3.8+
