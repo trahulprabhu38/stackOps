@@ -21,6 +21,9 @@
   },
   "devDependencies": {
     "eslint": "^8.54.0",
-    "eslint-config-next": "14.0.0"
+    "eslint-config-next": "14.0.0",
+    "@babel/preset-env": "^7.24.5",
+    "@babel/preset-react": "^7.24.5",
+    "babel-jest": "^29.7.0"
   }
 }

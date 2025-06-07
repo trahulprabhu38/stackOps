@@ -33,7 +33,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r backend/requirements.txt
       - name: Run backend tests
-        run: pytest backend/test/
+        run: PYTHONPATH=backend pytest backend/test/
 
   test-frontend:
     runs-on: ubuntu-latest
@@ -49,6 +49,7 @@ jobs:
         run: |
           cd frontend
           npm install
+          npm install --save-dev @babel/preset-env @babel/preset-react babel-jest
       - name: Run frontend tests
         run: |
           cd frontend
