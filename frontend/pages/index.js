@@ -7,7 +7,7 @@ export default function Home() {
   const [status, setStatus] = useState('');
   const [backendurl, setBackendUrl] = useState('');
 
-  const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL;
+  const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
   useEffect(() => {
     setBackendUrl(window.location.origin);

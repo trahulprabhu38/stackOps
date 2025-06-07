@@ -12,6 +12,16 @@ frontend/.next/
 
 terraform/.terraform/
 
+# Test cache and coverage (backend)
+backend/.pytest_cache/
+backend/.coverage
+backend/junit.xml
+backend/coverage/
 
+# Test cache and coverage (frontend)
+frontend/.nyc_output/
+frontend/coverage/
+frontend/coverage-final.json
+frontend/test-report.xml
 
 .DS_Store
