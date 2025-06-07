@@ -1,0 +1,15 @@
+# Python virtual environments
+backend/venv/
+
+# Node modules
+frontend/node_modules/
+backend/node_modules/
+
+# Next.js build output
+frontend/.next/
+
+# Terraform state files
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/.terraform/
+

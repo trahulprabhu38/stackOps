@@ -17,7 +17,6 @@ This project consists of a FastAPI backend and a Next.js frontend that communica
     └── package.json       # Node.js dependencies
 ```
 
-
 ## Prerequisites
 
 - Python 3.8+
@@ -124,6 +123,3 @@ NEXT_PUBLIC_API_URL=https://your-new-backend-url.com
 
 - `GET /api/message`: Get the integration message
   - Returns: `{"message": "You've successfully integrated the backend!"}`
-# stackOps
-# stackOps
-# stackOps

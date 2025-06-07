@@ -2,8 +2,9 @@ version: "3.8"
 
 services:
   backend:
-    image: trahulprabhu38/stackops:v1
+    image: trahulprabhu38/stackops:v5
     container_name: stackops_backend
+    platform: linux/amd64
     ports:
       - "8000:8000"
     environment:
@@ -12,8 +13,9 @@ services:
       - stacknet
 
   frontend:
-    image: trahulprabhu38/stackops-frontend:v1
+    image: trahulprabhu38/stackops-frontend:v5
     container_name: stackops_frontend
+    platform: linux/amd64
     ports:
       - "3000:3000"
     environment:
