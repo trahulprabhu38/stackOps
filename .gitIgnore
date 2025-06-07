@@ -9,8 +9,7 @@ backend/node_modules/
 frontend/.next/
 
 # Terraform state files
-terraform/terraform.tfstate
-terraform/terraform.tfstate.backup
+
 terraform/.terraform/
 
 
