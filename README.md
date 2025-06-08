@@ -110,7 +110,8 @@ flowchart TD
     
     class A,B,C,D terraformSteps
     class E,F,G,H,I,J,K,L,M awsResources
-    class N endState 
+    class N endState
+    
 ```
 
 
