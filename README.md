@@ -28,51 +28,91 @@ Welcome to **StackOps** – a modern, production-ready DevOps project that demon
     └── ci-cd.yml          # GitHub Actions CI/CD pipeline
 ```
 
-
 ---
+
+
+
+
 
 ## 🔄 CI/CD & Deployment Flow (Mermaid Diagram)
 
+
+
 ```mermaid
+
 flowchart TD
-    A[Developer Pushes to GitHub] --> B[GitHub Actions Triggered]
-    B --> C[Test Backend (pytest)]
-    B --> D[Test Frontend (Jest)]
-    C --> E[Build & Push Backend Docker Image]
-    D --> F[Build & Push Frontend Docker Image]
-    E --> G[Terraform Deploy]
+
+    A(Developer Pushes to GitHub) --> B(GitHub Actions Triggered)
+
+    B --> C(Test Backend: pytest)
+
+    B --> D(Test Frontend: Jest)
+
+    C --> E(Build & Push Backend Docker Image)
+
+    D --> F(Build & Push Frontend Docker Image)
+
+    E --> G(Terraform Deploy)
+
     F --> G
-    G --> H[Terraform Provisions AWS Resources]
-    H --> I[Deploys ECS Services (Fargate)]
-    I --> J[ALB Routes Traffic]
-    J --> K[User Accesses Frontend]
-    K --> L[Frontend Calls Backend via ALB]
-    L --> M[Backend Responds]
+
+    G --> H(Terraform Provisions AWS Resources)
+
+    H --> I(Deploys ECS Services: Fargate)
+
+    I --> J(ALB Routes Traffic)
+
+    J --> K(User Accesses Frontend)
+
+    K --> L(Frontend Calls Backend via ALB)
+
+    L --> M(Backend Responds)
+
 ```
 
----
 
 
-## 🗂️ Terrform implementation on AWS
+
+
+
+
+## 🗂️ Terraform implementation on AWS
+
 ```mermaid
+
 flowchart TD
-    A[Start: Developer runs Terraform] --> B[Terraform Init]
-    B --> C[Terraform Plan]
-    C --> D[Terraform Apply]
-    D --> E[Provision VPC & Subnets]
-    E --> F[Create Security Groups]
-    F --> G[Create IAM Roles & Policies]
-    G --> H[Provision ECS Cluster]
-    H --> I[Create Application Load Balancer (ALB)]
-    I --> J[Create Target Groups & Listeners]
-    J --> K[Deploy ECS Services (Frontend & Backend)]
-    K --> L[Register Tasks with Target Groups]
-    L --> M[ALB Routes Traffic to Services]
-    M --> N[Infrastructure Ready]
+
+    A(Start: Developer runs Terraform) --> B(Terraform Init)
+
+    B --> C(Terraform Plan)
+
+    C --> D(Terraform Apply)
+
+    D --> E(Provision VPC & Subnets)
+
+    E --> F(Create Security Groups)
+
+    F --> G(Create IAM Roles & Policies)
+
+    G --> H(Provision ECS Cluster)
+
+    H --> I(Create Application Load Balancer: ALB)
+
+    I --> J(Create Target Groups & Listeners)
+
+    J --> K(Deploy ECS Services: Frontend & Backend)
+
+    K --> L(Register Tasks with Target Groups)
+
+    L --> M(ALB Routes Traffic to Services)
+
+    M --> N(Infrastructure Ready)
 
 ```
 
----
+
+
+
 
 
 ## 🌐 Solution Overview
