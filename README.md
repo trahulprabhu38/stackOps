@@ -84,10 +84,11 @@ flowchart TD
     B --> C[<b>Terraform Plan</b><br>Preview infrastructure changes]
     C --> D[<b>Terraform Apply</b><br>Execute deployment]
     
-    D --> E
+    D --> Deployment
     
     subgraph Deployment["<b>AWS Deployment</b>"]
-        direction LR
+        direction TB
+        
         subgraph AWS["<b>AWS Resource Provisioning</b>"]
             E[<b>VPC & Subnets</b><br>Network infrastructure] --> F[<b>Security Groups</b><br>Network access control]
             F --> G[<b>IAM Roles & Policies</b><br>Service permissions]
@@ -100,15 +101,16 @@ flowchart TD
             K[<b>ECS Services</b><br>Frontend & Backend containers] --> L[<b>Task Registration</b><br>Connect to target groups]
             L --> M[<b>Traffic Routing</b><br>ALB directs requests to services]
         end
+        
+        AWS -.-> Services
+        J --> K
     end
     
-    J --> K
-    M --> N[<b>Infrastructure Ready</b><br>Deployment complete]
+    Deployment --> N[<b>Infrastructure Ready</b><br>Deployment complete]
     
     class A,B,C,D terraformSteps
     class E,F,G,H,I,J,K,L,M awsResources
     class N endState
-
 ```
 
 
