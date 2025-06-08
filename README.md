@@ -74,8 +74,7 @@ flowchart TD
 
 ## 🗂️ Terraform implementation on AWS
 
-```mermaid
-flowchart TD
+```flowchart TD
     classDef terraformSteps fill:#4285F4,stroke:#2A6DE8,color:white,stroke-width:2px
     classDef awsResources fill:#FF9900,stroke:#E88B2A,color:white,stroke-width:2px
     classDef endState fill:#34A853,stroke:#2A8840,color:white,stroke-width:2px
@@ -84,19 +83,22 @@ flowchart TD
     B --> C[<b>Terraform Plan</b><br>Preview infrastructure changes]
     C --> D[<b>Terraform Apply</b><br>Execute deployment]
     
-    subgraph AWS["<b>AWS Resource Provisioning</b>"]
-        E[<b>VPC & Subnets</b><br>Network infrastructure] --> F[<b>Security Groups</b><br>Network access control]
-        F --> G[<b>IAM Roles & Policies</b><br>Service permissions]
-        G --> H[<b>ECS Cluster</b><br>Container orchestration]
-        H --> I[<b>Application Load Balancer</b><br>Traffic distribution]
-        I --> J[<b>Target Groups & Listeners</b><br>Request routing]
-    end
-    
     D --> E
     
-    subgraph Services["<b>Service Deployment</b>"]
-        K[<b>ECS Services</b><br>Frontend & Backend containers] --> L[<b>Task Registration</b><br>Connect to target groups]
-        L --> M[<b>Traffic Routing</b><br>ALB directs requests to services]
+    subgraph Deployment["<b>AWS Deployment</b>"]
+        direction LR
+        subgraph AWS["<b>AWS Resource Provisioning</b>"]
+            E[<b>VPC & Subnets</b><br>Network infrastructure] --> F[<b>Security Groups</b><br>Network access control]
+            F --> G[<b>IAM Roles & Policies</b><br>Service permissions]
+            G --> H[<b>ECS Cluster</b><br>Container orchestration]
+            H --> I[<b>Application Load Balancer</b><br>Traffic distribution]
+            I --> J[<b>Target Groups & Listeners</b><br>Request routing]
+        end
+        
+        subgraph Services["<b>Service Deployment</b>"]
+            K[<b>ECS Services</b><br>Frontend & Backend containers] --> L[<b>Task Registration</b><br>Connect to target groups]
+            L --> M[<b>Traffic Routing</b><br>ALB directs requests to services]
+        end
     end
     
     J --> K
@@ -107,7 +109,6 @@ flowchart TD
     class N endState
 
 ```
-
 
 
 
