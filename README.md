@@ -74,7 +74,8 @@ flowchart TD
 
 ## 🗂️ Terraform implementation on AWS
 
-```flowchart TD
+```mermaid
+flowchart TD
     classDef terraformSteps fill:#4285F4,stroke:#2A6DE8,color:white,stroke-width:2px
     classDef awsResources fill:#FF9900,stroke:#E88B2A,color:white,stroke-width:2px
     classDef endState fill:#34A853,stroke:#2A8840,color:white,stroke-width:2px
