@@ -46,9 +46,6 @@ export default function Home() {
           <h2>Backend Message:</h2>
           <p>{message}</p>
         </div>
-        <div className="info">
-          <p>Backend URL: {backendurl}</p>
-        </div>
       </main>
 
       <style jsx>{`
