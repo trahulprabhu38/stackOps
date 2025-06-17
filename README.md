@@ -1,4 +1,4 @@
-# 🚀 StackOps: DevOps Assignment
+# 🚀 StackOps: DevOps Project
 
 Welcome to **StackOps** – a modern, production-ready DevOps project that demonstrates a complete CI/CD pipeline using **GitHub Actions**, **Terraform**, **AWS ECS/Fargate**, **Application Load Balancer (ALB)**, and robust application stacks with **FastAPI** (backend) and **Next.js** (frontend). Everything is containerized with Docker and tested end-to-end!
 
