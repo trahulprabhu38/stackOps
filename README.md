@@ -31,12 +31,7 @@ Welcome to **StackOps** – a modern, production-ready DevOps project that demon
 ---
 
 
-
-
-
 ## 🔄 CI/CD & Deployment Flow (Mermaid Diagram)
-
-
 
 ```mermaid
 
